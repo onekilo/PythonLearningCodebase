@@ -111,6 +111,5 @@ class Sudoku:
 if __name__ == "__main__":
     puzzle = Board().puzzle
     game = Sudoku(puzzle)
-    
-        
+           
     print(game.puzzle)
