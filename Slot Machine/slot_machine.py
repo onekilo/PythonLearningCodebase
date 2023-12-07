@@ -57,12 +57,7 @@ class SlotMachine:
                 print(f"You have won on {lines_won} lines for a total of ${amount_won}")
             else:
                 print("Better luck next time\n")
-
-        # self.deposit = self.make_deposit()
-        # self.lines = self.get_lines()
-        # self.bet_amount = self.bet()
-        # self.spin_outcome = self.spin(symbol_count, symbol_value)
-        # self.lines_won = self.check_winnings(self.spin_outcome, self.lines)
+       
 
     def print_game(self, spin_outcome):
         for r in range(len(spin_outcome)):
@@ -70,17 +65,13 @@ class SlotMachine:
             print(" | ".join(spin_outcome[r]), end="")
             print(" |")
 
-            # for c in spin_outcome:
-            #     if r!=len(spin_outcome)-1:
-            #         print(' | '.join)
 
     def check_winnings(self, spin_outcome, lines, bet_amount):
-        # winning_lines = []
+        
         lines_won = 0
         amount_won = 0
         for line in range(ROWS):
-            # result = all(x == my_list[0] for x in my_list[1:])
-            # x = spin_outcome[line][0]
+           
             if all(x == spin_outcome[line][0] for x in spin_outcome[line]):
                 # winning_lines.append(row)
                 if lines_won < lines:
